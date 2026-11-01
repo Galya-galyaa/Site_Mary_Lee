@@ -8,31 +8,73 @@ html, body {
 body {
     background: linear-gradient(to bottom, #FFFFFF 0%, #EFB0C0 100%);
     background-attachment: fixed;
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .headerTop {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
-    margin: 0;
 }
 
 .header__logo{
-    margin-left: 40px;
+    margin-left: 15px;
     margin-top: 20px;
-}
-
-.headerIcons {
-    margin: 0;
-    padding: 0;
 }
 
 .header_Icon_right {
     display: block;
     margin: 0;
     padding: 0;
-    /* text-decoration: none; */
+}
+
+.headerNav {
+    display: flex;
+    gap: 80px;
+    margin-top: 45px;
+    padding-left: 60px;
+
+}
+
+.headerNav a {
+    color: #FF01AA;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.headerSearchRow {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    gap: 40px;
+    background-color: #ffffffa1;
+    border-radius: 40px;
+    padding: 6px 30px;
+    margin-top: 100px;
+    margin-left: 38px;  
+    margin-right: 38px;
+}
+
+.headerSearchBox {
+    background-color: transparent;
+    /* border-radius: 40px; */
+    padding: 16px 0px;
+    /* min-width: 180px; */
+    color: #372929;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+}
+
+.headerSearchBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.headerSearchBtn img {
+    height: 24px;
+    display: block;
 }
 
