@@ -79,11 +79,11 @@ body {
     justify-content: flex-start; 
     align-items: center;
     gap: 40px;
-    background-color: #ffffffa1;
+    background-color: rgba(55, 41, 41, 0.05);
     border-radius: 40px;
     padding: 6px 30px;
     width: 100%; 
-    max-width: 93%;
+    max-width: 96%;
     margin: 0 auto; 
     box-sizing: border-box;
 
@@ -147,5 +147,219 @@ body {
     padding-bottom: 20px;
 }
 
+.main-content {
+    max-width: 93%; 
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.popular-section,
+.new-collection-section,
+.ready-looks-section {
+    margin-top: 120px; 
+}
+
+.popular-section {
+    margin-top: 100px;
+}
+
+.popular-title {
+    color: #FF01AA;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 70px;
+}
+
+.section-title {
+    color: #FF01AA;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 70px;
+}
+
+.products-grid {
+    display: flex;
+    gap: 70px;
+    overflow-x: auto;
+    scroll-behavior: smooth; 
+    scroll-snap-type: x mandatory; 
+    padding-bottom: 80px; 
+    padding-top: 10px;
+    padding-right: 30px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    user-select: none;
+}
+
+.products-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.collection-content,
+.looks-content {
+    min-height: 200px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-family: 'Inter', sans-serif;
+}
 
 
+.product-card {
+    flex: 0 0 263px; 
+    width: 263px;
+    height: 490px;
+    border-radius: 10px;
+    background-color: rgba(55, 41, 41, 0.1);; 
+    position: relative;
+    scroll-snap-align: start; 
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image-box {
+    height: 313px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-main-image {
+    width: 232px;
+    height: 232px;
+    object-fit: contain;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    z-index: 2;
+}
+
+.favorite-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-info-box {
+    padding: 15px 20px 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex-grow: 1; 
+}
+
+.brand-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.product-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #000;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.price-block {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start; 
+    justify-content: center;
+    gap: 10px;
+    margin-top: auto; 
+    margin-bottom: 40px; 
+}
+
+.current-price {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+}
+
+.old-price {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #888; 
+    text-decoration: line-through;
+    vertical-align: super;
+    line-height: 1;
+    margin-top: -5px; 
+}
+
+.add-to-cart-btn {
+    position: absolute;
+    bottom: -31px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 173px;
+    height: 63px;
+    border-radius: 31.5px; 
+    background-color: #FF01AA;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300; 
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #d1008b;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top:30px; 
+}
+
+.dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: rgba(55, 41, 41, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #FF01AA; 
+}
