@@ -84,4 +84,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
         track.style.cursor = 'grab';
     }
+    const newGrid = document.querySelector('.new-grid');
+    const viewAllBtn = document.getElementById('viewAllBtn');
+
+    if (newGrid && viewAllBtn) {
+        const newCards = newGrid.querySelectorAll('.product-card');
+        const cardsPerLoad = 4;
+        let visibleCards = cardsPerLoad;
+
+        const updateCardsVisibility = () => {
+            newCards.forEach((card, index) => {
+                if (index < visibleCards) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            if (visibleCards >= newCards.length) {
+                viewAllBtn.style.display = 'none';
+            }
+        };
+
+        updateCardsVisibility();
+
+        viewAllBtn.addEventListener('click', () => {
+            visibleCards += cardsPerLoad;
+            updateCardsVisibility();
+        });
+    }
 });

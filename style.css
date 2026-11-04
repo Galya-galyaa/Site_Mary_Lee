@@ -143,7 +143,7 @@ body {
 .headerBottom {
     padding-left: 30px;
     padding-right: 30px;
-    padding-top: 50px; 
+    padding-top: 70px; 
     padding-bottom: 20px;
 }
 
@@ -156,7 +156,7 @@ body {
 .popular-section,
 .new-collection-section,
 .ready-looks-section {
-    margin-top: 120px; 
+    margin-top: 100px; 
 }
 
 .popular-section {
@@ -363,3 +363,50 @@ body {
 .dot.active {
     background-color: #FF01AA; 
 }
+
+.new-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 70px;
+    overflow-x: visible; 
+    padding-bottom: 0;
+    padding-right: 0;
+}
+
+.collection-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.view-all-btn {
+    background: transparent;
+    border: 1px solid #372929;
+    border-radius: 30px;
+    padding: 15px 60px;
+    
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #372929;
+    
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+    background-color: #372929;
+    color: #FFFFFF;
+}
+
+.new-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 13px;
+    color: #FF01AA;
+    vertical-align: super;
+    line-height: 1;
+    margin-top: -5px; 
+}
+
+
