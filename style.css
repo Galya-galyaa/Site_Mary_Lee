@@ -409,4 +409,68 @@ body {
     margin-top: -5px; 
 }
 
+.looks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    justify-content: center; 
+    gap: 40px; 
+    overflow-x: visible;
+}
 
+.look-card {
+    width: 100%;
+    /* max-width: 470px; */
+    border-radius: 10px;
+    background-color: rgba(55, 41, 41, 0.1); 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.look-image-box {
+    width: 100%;
+    height: 510px; 
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+.look-main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    border-radius: 10px;
+}
+
+.favorite-btn-large {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 35px; 
+    height: 35px; 
+    z-index: 2;
+}
+
+.favorite-btn-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.look-info-box {
+    padding: 20px 20px 30px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; 
+}

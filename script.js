@@ -105,12 +105,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 viewAllBtn.style.display = 'none';
             }
         };
-
         updateCardsVisibility();
-
         viewAllBtn.addEventListener('click', () => {
             visibleCards += cardsPerLoad;
             updateCardsVisibility();
+        });
+    }
+    const looksGrid = document.getElementById('looksGrid');
+    const viewAllLooksBtn = document.getElementById('viewAllLooksBtn');
+
+    if (looksGrid && viewAllLooksBtn) {
+        const lookCards = looksGrid.querySelectorAll('.look-card');
+        const cardsPerLoad = 3;
+        let visibleLookCards = cardsPerLoad;
+
+        const updateLooksVisibility = () => {
+            lookCards.forEach((card, index) => {
+                if (index < visibleLookCards) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            if (visibleLookCards >= lookCards.length) {
+                viewAllLooksBtn.style.display = 'none';
+            }
+        };
+        updateLooksVisibility();
+        viewAllLooksBtn.addEventListener('click', () => {
+            visibleLookCards += cardsPerLoad;
+            updateLooksVisibility();
         });
     }
 });
