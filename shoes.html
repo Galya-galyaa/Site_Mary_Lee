@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="catalog.css">
+</head>
+<body>
+    <header class="head-with-logo">
+        <div class="headerTop">
+            <a href="index.html" class="header__logo">
+                <img src="img/for_logo_header/logo.svg" alt="Логотип">
+            </a>
+            <a href="index.html" class="header_Icon_right">
+                <img src="img/for_logo_header/special_line.svg" alt="Спец.линия">
+            </a>
+        </div>
+        <div class="headerMiddle">
+            <nav class="headerNav">
+                <a href="index.html">ГЛАВНАЯ</a>
+                <a href="catalog.html">КАТАЛОГ</a>
+                <a href="about.html">О НАС</a>
+            </nav>
+        
+            <div class="headerIcons">
+                <a href="profile.html" class="icon-link"><img src="img/for_logo_header/profile.svg" alt="Профиль"></a>
+                <a href="favorites.html" class="icon-link"><img src="img/for_logo_header/favorites.svg" alt="Избранное"></a>
+                <a href="cart.html" class="icon-link"><img src="img/for_logo_header/bag.svg" alt="Корзина"></a>
+            </div>
+        </div>
+        <div class="headerBottom">
+            <div class="headerSearchRow">
+                <button class="headerSearchBtn" aria-label="Найти">
+                    <img src="img/for_logo_header/search.svg" alt="Поиск">
+                </button>
+                <div class="headerSearchBox">Найдите что-нибудь красивое</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="catalog-nav">
+        <ul class="catalog-nav__list">
+            <li><a href="dresses.html" class="catalog-nav__link">ПЛАТЬЯ</a></li>
+            <li><a href="shoes.html" class="catalog-nav__link active">ТУФЛИ</a></li>
+            <li><a href="bags.html" class="catalog-nav__link">СУМКИ</a></li>
+            <li><a href="accessories.html" class="catalog-nav__link">АКСЕССУАРЫ</a></li>
+        </ul>
+    </section>
+
+    <section class="catalog-grid-wrapper">
+        <h2 style="color: #FF01AA; font-weight: 300;">Здесь скоро появятся shoes...</h2>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__col footer__col_left">
+                <div class="footer__logo">Mary Lee</div>
+                <p class="footer__desc">Интернет-магазин для красивого настроения</p>
+            </div>
+            <div class="footer__col footer__col_center">
+                <h4 class="footer__title">ИНФОРМАЦИЯ</h4>
+                <ul class="footer__nav-list">
+                    <li><a href="about.html" class="footer__link">О нас</a></li>
+                    <li><a href="catalog.html" class="footer__link">Каталог</a></li>
+                    <li><a href="#" class="footer__link">Как сделать заказ</a></li>
+                    <li><a href="#" class="footer__link">Доставка</a></li>
+                </ul>
+            </div>
+            <div class="footer__col footer__col_right">
+                <h4 class="footer__title">КОНТАКТЫ</h4>
+                <ul class="footer__nav-list">
+                    <li><a href="#" class="footer__link">+ 7 (3435) 452 28</a></li>
+                    <li><a href="#" class="footer__link">marrylee@mail.ru</a></li>
+                </ul>
+            </div>
+        </div>
+        <img src="img/for_footer/line-left.svg" alt="" class="footer__line">
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
