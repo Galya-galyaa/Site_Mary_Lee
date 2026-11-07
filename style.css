@@ -562,4 +562,27 @@ body {
   color: #7875FE;
 }
 
+.about-page {
+    max-width: 93%; 
+    margin: 0 auto;
+    padding: 80px 30px; 
+    min-height: 50vh;
+}
 
+.about-content {
+    max-width: 70%;
+}
+
+.about-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #372929; 
+    line-height: 1.8; 
+    margin-bottom: 20px;
+}
+
+.about-text strong {
+    font-weight: 500; 
+    color: #FF01AA; 
+}
