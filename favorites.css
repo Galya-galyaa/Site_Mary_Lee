@@ -1,0 +1,135 @@
+.favorites-container {
+    max-width: 96%;
+    margin: 40px auto 200px auto;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 20px;
+    transition: opacity 0.3s;
+}
+
+.back-btn:hover {
+    opacity: 0.7;
+}
+
+.back-btn img {
+    width: 40px;
+    height: auto;
+}
+
+.favorites-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+    color: #FF01AA;
+    margin: 0 0 40px 0;
+}
+
+.fav-item {
+    background-color: #FFFFFF;
+    width: 91%;
+    height: 245px;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.fav-image-box {
+    position: relative;
+    width: 232px;
+    height: 232px;
+    flex-shrink: 0;
+}
+
+.fav-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.fav-heart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.fav-svg-img {
+    width: 41px;
+    height: 41px;
+}
+
+.fav-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 45px;
+}
+
+.fav-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #000;
+    width: 300px;
+}
+
+.fav-price {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000;
+    margin-right: 130px;
+}
+
+.fav-counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    height: 45px;
+    background-color: #F3E8EB;
+    border-radius: 5px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+}
+
+.fav-counter button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+}
+
+.fav-total {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    margin-left: 40px;
+    width: 100px;
+    text-align: right;
+}
+
+.fav-add-cart {
+    background-color: #FF01AA;
+    color: #FFF;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: auto;
+}

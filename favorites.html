@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="favorites.css">
 </head>
 <body>
         <header class="head-with-logo">
@@ -42,7 +43,15 @@
         </div>
     </header>
 
-    
+    <main class="favorites-container">
+        <button class="back-btn" onclick="history.back()">
+            <img src="img/for_catalog/arrow_left_for_all.svg" alt="Назад">
+        </button>
+
+        <h1 class="favorites-title">Избранное</h1>
+
+        <div class="favorites-list" id="favoritesList"></div>
+    </main>
 
     <footer class="footer">
         <div class="footer__container">
@@ -69,5 +78,6 @@
         </div>
         <img src="img/for_footer/line-left.svg" alt="" class="footer__line">
     </footer>
+    <script src="favorites.js"></script>
 </body>
 </html>
