@@ -1,7 +1,9 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    /* height: 100%; */
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -586,3 +588,205 @@ body {
     font-weight: 500; 
     color: #FF01AA; 
 }
+@media (max-width: 576px) {
+    body, html {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .headerTop {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    .header__logo {
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+
+    .header__logo img {
+        width: 164px;
+        height: 89px;
+        object-fit: contain;
+    }
+
+    .header_Icon_right {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header_Icon_right img {
+        width: 161px;
+        height: 85px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .headerMiddle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .headerNav {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .headerNav a {
+        font-size: 16px;
+    }
+
+    .headerIcons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+
+    .headerIcons img {
+        height: 28px;
+        width: auto;
+    }
+
+    .headerBottom {
+        padding: 10px 15px 0 15px;
+    }
+
+    .headerSearchRow {
+        padding: 8px 15px;
+        gap: 15px;
+    }
+
+    .headerSearchBox {
+        font-size: 16px;
+        font-weight: 200;
+    }
+
+    .main-content {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .popular-section, 
+    .new-collection-section, 
+    .ready-looks-section {
+        margin-top: 50px;
+    }
+
+    .popular-title,
+    .section-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+        margin-top: 0;
+        padding-left: 0;
+    }
+
+    .carousel-dots {
+        display: none;
+    }
+
+    .products-grid,
+    .new-grid,
+    .looks-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 15px;
+        padding: 0 0 40px 0;
+        justify-content: flex-start;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .products-grid::-webkit-scrollbar,
+    .new-grid::-webkit-scrollbar,
+    .looks-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .product-card,
+    .look-card {
+        flex: 0 0 263px;
+        width: 263px;
+        height: 490px;
+        scroll-snap-align: center;
+        margin: 0;
+    }
+
+    .card-image-box,
+    .look-image-box {
+        height: 313px;
+    }
+
+    .collection-btn-wrapper {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .footer {
+        padding: 40px 0 0 0;
+    }
+
+    .footer__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        padding: 0 15px 150px 15px;
+        align-items: start;
+    }
+
+    .footer__col {
+        width: 100%;
+        margin-left: 0;
+        align-items: flex-start;
+        text-align: left;
+        padding: 0;
+    }
+
+    .footer__col_left { 
+        grid-column: 1 / -1;
+        order: 1; 
+    }
+    .footer__col_center { order: 2; }
+    .footer__col_right { order: 3; }
+
+    .footer__line {
+        width: 372px;
+        height: 110px;
+        max-width: 100%;
+        object-fit: contain;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 576px) {
+    .footer__col_left { 
+        grid-column: span 1; 
+    }
+    .footer__col_center { 
+        grid-column: span 1; 
+    }
+    .footer__col_right { 
+        grid-column: span 1; 
+    }
+}
+.ready-looks-section {
+    margin-top: -30px;
+}
+
