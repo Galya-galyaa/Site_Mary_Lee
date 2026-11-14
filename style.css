@@ -588,7 +588,7 @@ body {
     font-weight: 500; 
     color: #FF01AA; 
 }
-@media (max-width: 576px) {
+@media (max-width: 676px) {
     body, html {
         overflow-x: hidden;
         width: 100%;
@@ -775,7 +775,7 @@ body {
     }
 }
 
-@media (min-width: 450px) and (max-width: 576px) {
+@media (min-width: 450px) and (max-width: 676px) {
     .footer__col_left { 
         grid-column: span 1; 
     }
