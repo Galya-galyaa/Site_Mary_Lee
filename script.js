@@ -6,137 +6,66 @@ document.addEventListener('DOMContentLoaded', () => {
         if (link.getAttribute('href') === currentPage) link.classList.add('active');
     });
 
-    const track = document.getElementById('popularTrack');
-    const dotsContainer = document.getElementById('popularDots');
-
-    if (track && dotsContainer) {
-        const cards = track.querySelectorAll('.product-card');
-        const cardsPerPage = 4;
-        const totalPages = Math.ceil(cards.length / cardsPerPage);
-
-        if (cards.length > cardsPerPage) {
-            for (let i = 0; i < totalPages; i++) {
-                const dot = document.createElement('div');
-                dot.classList.add('dot');
-                if (i === 0) dot.classList.add('active');
-                
-                dot.addEventListener('click', () => {
-                    const cardWidth = cards[0].offsetWidth;
-                    const gap = parseInt(window.getComputedStyle(track).gap) || 0;
-                    const scrollAmount = (cardWidth + gap) * cardsPerPage * i;
-
-                    track.scrollTo({
-                        left: scrollAmount,
-                        behavior: 'smooth'
-                    });
-                });
-                dotsContainer.appendChild(dot);
-            }
-        }
-
-        track.addEventListener('scroll', () => {
-            const dots = dotsContainer.querySelectorAll('.dot');
-            if (dots.length === 0) return;
-
-            const maxScroll = track.scrollWidth - track.clientWidth;
-            let activeIndex = Math.round((track.scrollLeft / maxScroll) * (totalPages - 1));
-
-            if (activeIndex < 0) activeIndex = 0;
-            if (activeIndex >= totalPages) activeIndex = totalPages - 1;
-
-            dots.forEach((dot, index) => {
-                if (index === activeIndex) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
-            });
-        });
-
+    const enableDragScroll = (element) => {
+        if (!element) return;
         let isDown = false;
         let startX;
         let scrollLeft;
 
-        track.addEventListener('mousedown', (e) => {
+        element.addEventListener('mousedown', (e) => {
             isDown = true;
-            track.style.cursor = 'grabbing';
-            startX = e.pageX - track.offsetLeft;
-            scrollLeft = track.scrollLeft;
+            element.style.cursor = 'grabbing';
+            startX = e.pageX - element.offsetLeft;
+            scrollLeft = element.scrollLeft;
         });
 
-        track.addEventListener('mouseleave', () => {
+        element.addEventListener('mouseleave', () => {
             isDown = false;
-            track.style.cursor = 'grab';
+            element.style.cursor = 'grab';
         });
 
-        track.addEventListener('mouseup', () => {
+        element.addEventListener('mouseup', () => {
             isDown = false;
-            track.style.cursor = 'grab';
+            element.style.cursor = 'grab';
         });
 
-        track.addEventListener('mousemove', (e) => {
+        element.addEventListener('mousemove', (e) => {
             if (!isDown) return;
             e.preventDefault();
-            const x = e.pageX - track.offsetLeft;
+            const x = e.pageX - element.offsetLeft;
             const walk = (x - startX) * 1.5;
-            track.scrollLeft = scrollLeft - walk;
+            element.scrollLeft = scrollLeft - walk;
         });
 
-        track.style.cursor = 'grab';
-    }
+        element.style.cursor = 'grab';
+    };
+
+    const popularTrack = document.getElementById('popularTrack');
     const newGrid = document.querySelector('.new-grid');
+    const looksGrid = document.querySelector('.looks-grid');
+
+    enableDragScroll(popularTrack);
+    enableDragScroll(newGrid);
+    enableDragScroll(looksGrid);
+
+    const viewAllPopularBtn = document.getElementById('viewAllPopularBtn');
+    if (viewAllPopularBtn) {
+        viewAllPopularBtn.addEventListener('click', () => {
+            window.location.href = 'popular.html'; 
+        });
+    }
+
     const viewAllBtn = document.getElementById('viewAllBtn');
-
-    if (newGrid && viewAllBtn) {
-        const newCards = newGrid.querySelectorAll('.product-card');
-        const cardsPerLoad = 4;
-        let visibleCards = cardsPerLoad;
-
-        const updateCardsVisibility = () => {
-            newCards.forEach((card, index) => {
-                if (index < visibleCards) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-
-            if (visibleCards >= newCards.length) {
-                viewAllBtn.style.display = 'none';
-            }
-        };
-        updateCardsVisibility();
+    if (viewAllBtn) {
         viewAllBtn.addEventListener('click', () => {
-            visibleCards += cardsPerLoad;
-            updateCardsVisibility();
+            window.location.href = 'new-collection.html'; 
         });
     }
-    const looksGrid = document.getElementById('looksGrid');
+
     const viewAllLooksBtn = document.getElementById('viewAllLooksBtn');
-
-    if (looksGrid && viewAllLooksBtn) {
-        const lookCards = looksGrid.querySelectorAll('.look-card');
-        const cardsPerLoad = 3;
-        let visibleLookCards = cardsPerLoad;
-
-        const updateLooksVisibility = () => {
-            lookCards.forEach((card, index) => {
-                if (index < visibleLookCards) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-
-            if (visibleLookCards >= lookCards.length) {
-                viewAllLooksBtn.style.display = 'none';
-            }
-        };
-        updateLooksVisibility();
+    if (viewAllLooksBtn) {
         viewAllLooksBtn.addEventListener('click', () => {
-            visibleLookCards += cardsPerLoad;
-            updateLooksVisibility();
+            window.location.href = 'Looks.html'; 
         });
     }
-    
 });
