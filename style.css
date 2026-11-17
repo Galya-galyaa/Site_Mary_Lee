@@ -285,7 +285,7 @@ body {
     font-weight: 300;
     font-size: 15px;
     color: #000;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     line-height: 1.2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -298,7 +298,7 @@ body {
     align-items: flex-start; 
     justify-content: center;
     gap: 10px;
-    margin-top: auto; 
+    margin-top: 20px; 
     margin-bottom: 40px; 
 }
 
@@ -472,7 +472,7 @@ body {
 
 .footer__container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1250px;
   margin: 0 auto;
   padding: 70px 30px 180px 30px;
   display: flex;
@@ -776,7 +776,7 @@ body {
 .headerMiddle,
 .footer__container {
     width: 96%;
-    max-width: 1440px;
+    max-width: 1250px;
     margin: 0 auto;
     box-sizing: border-box;
     padding-left: clamp(15px, 3vw, 30px);
@@ -808,7 +808,7 @@ body {
     .headerMiddle,
     .footer__container {
         width: 96%;
-        max-width: 1400px;
+        max-width: 1250px;
     }
 
     .products-grid,
