@@ -549,21 +549,25 @@ body {
   color: #7875FE;
 }
 
-.about-page {
-    max-width: 98%; 
-    margin: 0 auto;
-    padding: 80px 30px; 
+
+body .about-page {
+    width: 100%;
+    max-width: 1290px;
+    padding: clamp(40px, 8vw, 80px) clamp(15px, 3vw, 30px);
     min-height: 50vh;
+    box-sizing: border-box;
+    padding-bottom: 150px;
 }
 
 .about-content {
-    max-width: 93%;
+    width: 100%;
+    max-width: 98%;
 }
 
 .about-text {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-    font-size: 18px;
+    font-size: clamp(16px, 2vw, 18px);
     color: #372929; 
     line-height: 1.8; 
     margin-bottom: 20px;
@@ -908,3 +912,19 @@ body {
 .new-collection-section {
     margin-top: 10px;
 }
+
+.about-title {
+    color: #FF01AA;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: clamp(18px, 4vw, 25px);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.about-spacer {
+    height: 65px;
+    width: 100%;
+}
+
+
