@@ -916,9 +916,9 @@ body .about-page {
 .about-title {
     color: #FF01AA;
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: clamp(18px, 4vw, 25px);
-    margin-top: 30px;
+    font-weight: 300;
+    font-size: clamp(20px, 4vw, 25px);
+    margin-top: 50px;
     margin-bottom: 30px;
 }
 
