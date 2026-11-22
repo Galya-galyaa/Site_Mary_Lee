@@ -45,27 +45,32 @@
 
     <main class="profile-container">
         <section class="profile-left">
-            <h1 class="profile-title">Личный кабинет</h1>
+            <div class="profile-header-wrapper">
+                <h1 class="profile-title">Личный кабинет</h1>
+                <button type="button" class="edit-btn" id="editProfileBtn" aria-label="Редактировать профиль">
+                    <img src="img/edit-dark.svg" alt="Редактировать">
+                </button>
+            </div>
             
             <div class="profile-avatar">
-                <span>Г</span>
+                <span id="avatarLetter">Г</span>
             </div>
 
             <form class="profile-form">
                 <div class="form-group">
                     <label class="form-label required">Ф.И.О.</label>
-                    <input type="text" class="form-input" placeholder="Иванова">
+                    <input type="text" class="form-input profile-input" id="fioInput" placeholder="Иванова" value="Иванова" disabled>
                 </div>
 
                 <div class="form-group">
                     <div class="radio-group">
                         <label class="radio-label">
-                            <input type="radio" name="gender" checked>
+                            <input type="radio" name="gender" class="profile-input" checked disabled>
                             <span class="radio-custom"></span>
                             Женский
                         </label>
                         <label class="radio-label">
-                            <input type="radio" name="gender">
+                            <input type="radio" name="gender" class="profile-input" disabled>
                             <span class="radio-custom"></span>
                             Мужской
                         </label>
@@ -74,25 +79,26 @@
 
                 <div class="form-group">
                     <label class="form-label required">Дата рождения</label>
-                    <input type="text" class="form-input" placeholder="12.06.2002">
+                    <input type="date" class="form-input profile-input" id="dateInput" value="2002-06-12" disabled>
                 </div>
 
                 <div class="form-group">
                     <label class="form-label required">Электронная почта</label>
-                    <input type="email" class="form-input" placeholder="ivanovna@mail.ru">
+                    <input type="email" class="form-input profile-input" placeholder="ivanovna@mail.ru" value="ivanovna@mail.ru" disabled>
                 </div>
 
                 <div class="form-group">
                     <label class="form-label required">Контактный телефон</label>
-                    <input type="tel" class="form-input" placeholder="+7(921)623-99-99">
+                    <input type="tel" class="form-input profile-input" id="phoneInput" maxlength="12" pattern="[0-9+]+" title="Введите номер: только цифры и знак +" placeholder="+79216239999" value="+79216239999" disabled>
                 </div>
 
                 <div class="form-group">
                     <label class="form-label required">Город</label>
-                    <input type="text" class="form-input" placeholder="Нижний Тагил">
+                    <input type="text" class="form-input profile-input" placeholder="Нижний Тагил" value="Нижний Тагил" disabled>
                 </div>
 
-                <button type="submit" class="profile-submit">СОХРАНИТЬ</button>
+                <button type="submit" class="profile-submit" id="saveProfileBtn">СОХРАНИТЬ</button>
+                <button type="button" class="profile-cancel hidden" id="cancelProfileBtn">Отменить изменения</button>
                 
                 <button type="button" class="profile-delete">Удалить личные данные и кабинет</button>
             </form>
@@ -141,5 +147,6 @@
         </div>
         <img src="img/for_footer/line-left.svg" alt="" class="footer__line">
     </footer>
+    <script src="profile.js"></script>
 </body>
 </html>

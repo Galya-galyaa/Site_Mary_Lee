@@ -24,7 +24,8 @@ body .profile-left {
     font-weight: 270;
     font-size: clamp(24px, 3vw, 28px);
     color: #FF01AA;
-    margin: 0 0 30px 0;
+    margin: 0px;
+    /* margin: 0 0 30px 0; */
 }
 
 .profile-avatar {
@@ -92,7 +93,7 @@ body .profile-left {
 }
 
 .form-input::placeholder {
-    color: #757575;
+    color: #202020;
 }
 
 .radio-group {
@@ -212,3 +213,93 @@ body .profile-right {
     width: 24px;
     height: 24px;
 }
+
+.profile-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.profile-header-wrapper .profile-title {
+    margin: 0;
+}
+
+.edit-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.edit-btn img {
+    width: clamp(20px, 3vw, 30px);
+    height: auto;
+    display: block;
+}
+
+.edit-btn:hover {
+    transform: scale(1.1);
+}
+
+.form-input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.radio-label input[type="radio"]:disabled + .radio-custom {
+    opacity: 0.6;
+    border-color: #999;
+}
+
+.profile-submit.hidden {
+    display: none;
+}
+
+.profile-avatar {
+    width: clamp(150px, 20vw, 268px);
+    height: clamp(150px, 20vw, 268px);
+    background-color: rgba(55, 41, 41, 0.1);
+    border-radius: 77px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.profile-avatar span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: clamp(48px, 8vw, 96px);
+    color: #000000;
+}
+
+.profile-cancel {
+    width: 100%;
+    height: 70px;
+    background-color: transparent;
+    color: #000000;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    border-radius: 35px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-cancel:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.profile-cancel.hidden {
+    display: none;
+}
+
