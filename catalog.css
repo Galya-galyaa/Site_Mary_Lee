@@ -148,3 +148,13 @@ body .catalog-grid .card-info-box {
 body .catalog-grid .product-card.hidden {
     display: none;
 }
+
+
+body .page-title {
+    text-align: center;
+    color: #FF01AA;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: clamp(16px, 4vw, 22px);
+    margin: 30px 0 0 0;
+}
