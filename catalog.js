@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const cards = document.querySelectorAll('#catalogGrid .product-card');
+    const cards = document.querySelectorAll('#catalogGrid .product-card, #catalogGrid .look-card');
     const paginationItems = document.querySelectorAll('.pagination__item');
     const prevBtn = document.getElementById('prevPage');
     const nextBtn = document.getElementById('nextPage');

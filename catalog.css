@@ -158,3 +158,20 @@ body .page-title {
     font-size: clamp(16px, 4vw, 22px);
     margin: 30px 0 0 0;
 }
+
+body .catalog-grid .look-card {
+    width: 100%;
+    max-width: 380px; 
+    height: auto;
+    margin: 0 auto 50px auto;
+    flex: none;
+}
+
+body .catalog-grid .look-card .favorite-btn-large {
+    width: 24px;
+    height: 24px;
+    top: 20px;
+    right: 20px;
+}
+
+
