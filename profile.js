@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const isDisabled = inputs[0].disabled;
 
         if (isDisabled) {
-            // СОХРАНЯЕМ ТЕКУЩЕЕ СОСТОЯНИЕ ПЕРЕД РЕДАКТИРОВАНИЕМ
             savedState = Array.from(inputs).map(input => {
                 if (input.type === 'radio') {
                     return input.checked;
@@ -49,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     cancelBtn.addEventListener('click', () => {
-        // ВОЗВРАЩАЕМ СОХРАНЕННОЕ СОСТОЯНИЕ
         inputs.forEach((input, index) => {
             if (input.type === 'radio') {
                 input.checked = savedState[index];
