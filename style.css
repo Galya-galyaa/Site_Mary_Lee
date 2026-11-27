@@ -795,7 +795,8 @@ body .about-page {
 
 .popular-title,
 .section-title {
-    font-size: clamp(22px, 3vw, 26px);
+    font-weight: 500;
+    font-size: clamp(18px, 2vw, 20px);
     margin-bottom: clamp(20px, 4vw, 40px);
 }
 
@@ -915,8 +916,8 @@ body .about-page {
 .about-title {
     color: #FF01AA;
     font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    font-size: clamp(20px, 4vw, 25px);
+    font-weight: 500;
+    font-size: clamp(18px, 2vw, 20px);
     margin-top: 50px;
     margin-bottom: 30px;
 }

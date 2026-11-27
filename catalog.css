@@ -16,7 +16,7 @@ body .catalog-nav {
 .catalog-nav__link {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    font-size: clamp(14px, 2vw, 20px);
+    font-size: clamp(16px, 3vw, 20px);
     color: #FF01AA;
     text-decoration: none;
     text-transform: uppercase;
@@ -154,8 +154,8 @@ body .page-title {
     text-align: center;
     color: #FF01AA;
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: clamp(16px, 4vw, 22px);
+    font-weight: 500;
+    font-size: clamp(18px, 2vw, 20px);
     margin: 30px 0 0 0;
 }
 
