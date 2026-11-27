@@ -303,3 +303,60 @@ body .profile-right {
     display: none;
 }
 
+
+.error-message {
+    color: #d1008b;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 15px;
+    display: none; 
+}
+
+.form-input.error {
+    border-color: #d1008b;
+    background-color: rgba(209, 0, 139, 0.05);
+}
+
+.error-message.show {
+    display: block;
+}
+
+.city-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.city-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    z-index: 100;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    margin-top: 5px;
+}
+
+.city-suggestions.active {
+    display: block;
+}
+
+.city-suggestion-item {
+    padding: 12px 25px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.city-suggestion-item:hover {
+    background-color: rgba(255, 1, 170, 0.1);
+}

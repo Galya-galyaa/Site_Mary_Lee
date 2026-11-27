@@ -60,18 +60,19 @@
             <form class="profile-form">
                 <div class="form-group">
                     <label class="form-label required">Ф.И.О.</label>
-                    <input type="text" class="form-input profile-input" id="fioInput" placeholder="Иванова" value="Иванова" disabled>
+                    <input type="text" class="form-input profile-input" id="fioInput" placeholder="Иванова" value="Иванова Марина" disabled>
+                    <div class="error-message" id="fioError"></div>
                 </div>
 
                 <div class="form-group">
                     <div class="radio-group">
                         <label class="radio-label">
-                            <input type="radio" name="gender" class="profile-input" checked disabled>
+                            <input type="radio" name="gender" class="profile-input" value="female" checked disabled>
                             <span class="radio-custom"></span>
                             Женский
                         </label>
                         <label class="radio-label">
-                            <input type="radio" name="gender" class="profile-input" disabled>
+                            <input type="radio" name="gender" class="profile-input" value="male" disabled>
                             <span class="radio-custom"></span>
                             Мужской
                         </label>
@@ -81,26 +82,32 @@
                 <div class="form-group">
                     <label class="form-label required">Дата рождения</label>
                     <input type="date" class="form-input profile-input" id="dateInput" value="2002-06-12" disabled>
+                    <div class="error-message" id="dateError"></div>
                 </div>
 
                 <div class="form-group">
                     <label class="form-label required">Электронная почта</label>
-                    <input type="email" class="form-input profile-input" placeholder="ivanovna@mail.ru" value="ivanovna@mail.ru" disabled>
+                    <input type="email" class="form-input profile-input" id="emailInput" placeholder="ivanovna@mail.ru" value="ivanovna@mail.ru" disabled>
+                    <div class="error-message" id="emailError"></div>
                 </div>
 
                 <div class="form-group">
                     <label class="form-label required">Контактный телефон</label>
-                    <input type="tel" class="form-input profile-input" id="phoneInput" maxlength="12" pattern="[0-9+]+" title="Введите номер: только цифры и знак +" placeholder="+79216239999" value="+79216239999" disabled>
+                    <input type="tel" class="form-input profile-input" id="phoneInput" placeholder="+7 (922) 612-76-78" value="+" disabled>
+                    <div class="error-message" id="phoneError"></div>
                 </div>
 
                 <div class="form-group">
                     <label class="form-label required">Город</label>
-                    <input type="text" class="form-input profile-input" placeholder="Нижний Тагил" value="Нижний Тагил" disabled>
+                    <div class="city-wrapper">
+                        <input type="text" class="form-input profile-input" id="cityInput" placeholder="Нижний Тагил" value="Нижний Тагил" disabled autocomplete="off">
+                        <div class="city-suggestions" id="citySuggestions"></div>
+                    </div>
+                    <div class="error-message" id="cityError"></div>
                 </div>
 
                 <button type="submit" class="profile-submit" id="saveProfileBtn">СОХРАНИТЬ</button>
                 <button type="button" class="profile-cancel hidden" id="cancelProfileBtn">Отменить изменения</button>
-                
                 <button type="button" class="profile-delete">Удалить личные данные и кабинет</button>
             </form>
         </section>
