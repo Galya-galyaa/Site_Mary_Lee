@@ -75,10 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
         emailInput.addEventListener('input', (e) => {
             const originalValue = e.target.value;
             const cleanValue = originalValue.replace(/[^a-zA-Z0-9@._%+-]/g, '');
-            e.target.value = cleanValue;
-
             if (originalValue !== cleanValue) {
-                showError('emailInput', 'emailError', 'В email можно использовать только английские буквы и цифры!');
+                showError('emailInput', 'emailError', 'В email можно использовать только английские буквы!');
+                e.target.value = cleanValue;
             } else {
                 hideError('emailInput', 'emailError');
             }

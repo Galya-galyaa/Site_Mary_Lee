@@ -1,6 +1,6 @@
 body .profile-container {
     width: 96%;
-    max-width: 1290px;
+    max-width: 1250px;
     margin: 0 auto;
     padding: 40px clamp(15px, 3vw, 30px) 200px clamp(15px, 3vw, 30px);
     display: flex;
@@ -237,7 +237,7 @@ body .profile-right {
 }
 
 .edit-btn img {
-    width: clamp(20px, 3vw, 30px);
+    width: clamp(18px, 3vw, 24px);
     height: auto;
     display: block;
 }
