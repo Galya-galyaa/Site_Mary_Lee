@@ -6,54 +6,54 @@ document.addEventListener("DOMContentLoaded", function() {
     const loadMoreBtn = document.getElementById('loadMoreBtn');
     
     let currentPage = 1;
+    const itemsPerPage = 8;
 
-    function setActivePage(page) {
+    function showPage(page) {
         currentPage = page;
         paginationItems.forEach(item => {
             item.classList.toggle('active', parseInt(item.dataset.page) === page);
         });
-    }
-
-    function showAllItems() {
-        cards.forEach(card => card.classList.remove('hidden'));
-        setActivePage(2);
-    }
-
-    function hideExtraItems() {
         cards.forEach((card, index) => {
-            if (index >= 8) card.classList.add('hidden');
-            else card.classList.remove('hidden');
+            card.style.display = 'none';
+            if (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage) {
+                card.style.display = 'block';
+            }
         });
-        setActivePage(1);
     }
 
     paginationItems.forEach(item => {
         item.addEventListener('click', () => {
-            const page = parseInt(item.dataset.page);
-            if (page === 1) hideExtraItems();
-            if (page === 2) showAllItems();
+            showPage(parseInt(item.dataset.page));
         });
     });
 
     if (prevBtn) {
         prevBtn.addEventListener('click', () => {
-            if (currentPage === 2) hideExtraItems();
+            if (currentPage > 1) showPage(currentPage - 1);
         });
     }
 
     if (nextBtn) {
         nextBtn.addEventListener('click', () => {
-            if (currentPage === 1) showAllItems();
+            const totalPages = Math.ceil(cards.length / itemsPerPage);
+            if (currentPage < totalPages) showPage(currentPage + 1);
         });
     }
 
     if (loadMoreBtn) {
         loadMoreBtn.addEventListener('click', () => {
-            if (currentPage === 1) {
-                showAllItems();
+            let hiddenCount = 0;
+            cards.forEach(card => {
+                if (card.style.display === 'none') {
+                    card.style.display = 'block';
+                    hiddenCount++;
+                }
+            });
+            if (hiddenCount === 0) {
+                loadMoreBtn.style.display = 'none';
             }
         });
     }
 
-    hideExtraItems();
+    showPage(1);
 });
